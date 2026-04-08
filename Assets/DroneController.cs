@@ -18,12 +18,18 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 input = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W)) input += transform.forward;
-        if (Input.GetKey(KeyCode.S)) input -= transform.forward;
-        if (Input.GetKey(KeyCode.D)) input += transform.right;
-        if (Input.GetKey(KeyCode.A)) input -= transform.right;
-        if (Input.GetKey(KeyCode.Space)) input += Vector3.up;
-        if (Input.GetKey(KeyCode.LeftControl)) input -= Vector3.up;
+        if (Input.GetKey(KeyCode.W))
+            input += transform.forward;
+        if (Input.GetKey(KeyCode.S))
+            input -= transform.forward;
+        if (Input.GetKey(KeyCode.D))
+            input += transform.right;
+        if (Input.GetKey(KeyCode.A))
+            input -= transform.right;
+        if (Input.GetKey(KeyCode.Space))
+            input += Vector3.up;
+        if (Input.GetKey(KeyCode.LeftControl))
+            input -= Vector3.up;
 
         if (input != Vector3.zero)
             input = input.normalized;
