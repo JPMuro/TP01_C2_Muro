@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -701,9 +702,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad91cdd244520654aa1ad8249e95d1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  target: {fileID: 0}
+  target: {fileID: 1993188576}
   offset: {x: 0, y: 3, z: -6}
   mouseSensitivity: 200
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a407cb6553102e4439afac00a8019249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  healthText: {fileID: 192615396}
+  player: {fileID: 1993188580}
 --- !u!1 &1241714889
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PERDISTE
+  m_text: PERDISTE :(
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -934,7 +949,7 @@ GameObject:
   - component: {fileID: 1993188573}
   - component: {fileID: 1993188577}
   - component: {fileID: 1993188579}
-  - component: {fileID: 1993188578}
+  - component: {fileID: 1993188580}
   m_Layer: 0
   m_Name: Dron
   m_TagString: Untagged
@@ -1060,22 +1075,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1993188578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993188572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c796bc60063aa614ab289b08c2940744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 100
-  healthText: {fileID: 0}
 --- !u!114 &1993188579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,6 +1092,21 @@ MonoBehaviour:
   acceleration: 20
   speed: 10
   friction: 5
+--- !u!114 &1993188580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993188572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df969c2c4a2aff743a81511ebd29a3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
+  maxHealth: 3
+  healthText: {fileID: 192615396}
+  gameOverText: {fileID: 1495809475}
 --- !u!1 &1996407881
 GameObject:
   m_ObjectHideFlags: 0
