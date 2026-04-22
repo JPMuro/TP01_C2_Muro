@@ -1,0 +1,2 @@
+Dron de My Tamagotchi Forever.
+Modelo sacado de models.spriters-resource.com
